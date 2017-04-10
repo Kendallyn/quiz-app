@@ -8,3 +8,7 @@ Requirements:
 -When viewing a question, user should be able to see which question number they are on and current score
 -When user submits answer, first get feedback if correct or incorrect. If correct, moved along to next question; if incorrect, user should be shown correct answer and then moved along to the next question
 -When quiz is complete, user should be shown overall score (how many they got right out of total questions asked) and be able to start the quiz over again
+
+Technical Requirements:
+-Use objects, arrays, functions, looping, event listeners, DOM traversal and manipulation
+-Save work to git and github as I go
