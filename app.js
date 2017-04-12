@@ -6,6 +6,7 @@ variables, objects and functions definitions
 
 //object of questions
 var quiz = [
+    /*0*/
     {
         question: "What is a family of wolves that live together often named?",
         choices: ["Flock", "Pack", "Herd", "Pod"],
@@ -74,50 +75,45 @@ var currentQuestion = 0;
 //score counter
 var score = 0;
 //
-var choices = '';
+
 
 //loop through the questions 1 at a time no skipping
 /*declaration vs expression?? declaration of function displayQuestion () {}*/
-var displayQuestion = function () {
-        for (var i = 0; i < quiz.length; i++) {
-            /*code to display and loop through questions and choices and display # from question counter*/
-            //append function to html
-            var question = "<p>" + quiz[i].question + "</p>";
-            $('#questions').html(question);
-            choices += "<input type= 'radio' name= 'answers' id='radioButton' value= ' " + i + "'>" +
-                "<span class= 'answerText'>" + quiz[i].choices[i] +
-                "</span><br>";
-            choices += "<button type= 'submit' id= 'answerButton'>Submit</button>"
-            $("#choices").html(choices);
-        }
+function displayQuestion() {
+    for (var i = 0; i < quiz.length; i++) {
+        /*code to display and loop through questions and choices and display # from question counter*/
+        //append function to html
+        var question = "<p>" + quiz[i].question + "</p>";
+        $('#questions').html(question);
     }
-    //user selects choice
-var displayAnswer = function () {
-    console.log('hit function');
-    for (var i = 0; i < quiz[i].choices.length; i++) {
-        choices += "<input type= 'radio' name= 'answers' id='radioButton' value= ' " + i + "'>" +
-            "<span class= 'answerText'>" + quiz[i].choices[i] +
-            "</span><br>";
-    }
-    choices += "<button type= 'submit' id= 'answerButton'>Submit</button>"
-    $("#choices").html(choices);
 }
+//display choices and user selects one
+function displayAnswer() {
+    //getting to the function console shows not displaying choices
+    console.log('hello');
+    for (var i = 0; i < quiz[i].choices[i]; i++) {
+        var choices = "<li>" + quiz[i].choices + "</li>";
+        $('#choices').html(choices);
+    }
+}
+
 
 //user selects submit answer button
 
+
 //check if answer is correct
-/*declaration instead? function score()*/
-var score = function () {
+function score() {
+    var guess = ''
         //if correct add one to score
-        if (choice === correct) {
-            score += 1;
-            //if not correct do not add one to the score and show explanation
-        } else {
-            score += 0;
-        }
+    if (guess === quiz.correct) {
+        score += 1;
+        //if not correct do not add one to the score and show explanation
+    } else {
+        score += 0;
     }
-    /*Once quiz is complete show overall score and give restart quiz button*/
-var displayResults = function () {
+}
+/*Once quiz is complete show overall score and give restart quiz button*/
+function displayResults() {
     //code for showing correct answers
 }
 
