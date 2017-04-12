@@ -87,16 +87,16 @@ function displayQuestion() {
         $('#questions').html(question);
     }
 }
+
 //display choices and user selects one
 function displayAnswer() {
     //getting to the function console shows not displaying choices
     console.log('hello');
-    for (var i = 0; i < quiz[i].choices[i]; i++) {
-        var choices = "<li>" + quiz[i].choices + "</li>";
+    for (var i = 0; i < quiz.choices; i++) {
+        var choices = "<p>" + quiz.choices + "<p>";
         $('#choices').html(choices);
     }
 }
-
 
 //user selects submit answer button
 
