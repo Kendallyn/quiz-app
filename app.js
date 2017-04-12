@@ -6,7 +6,6 @@ variables, objects and functions definitions
 
 //object of questions
 var quiz = [
-    /*0*/
     {
         question: "What is a family of wolves that live together often named?",
         choices: ["Flock", "Pack", "Herd", "Pod"],
@@ -78,7 +77,6 @@ var score = 0;
 
 
 //loop through the questions 1 at a time no skipping
-/*declaration vs expression?? declaration of function displayQuestion () {}*/
 function displayQuestion() {
     for (var i = 0; i < quiz.length; i++) {
         /*code to display and loop through questions and choices and display # from question counter*/
@@ -89,14 +87,15 @@ function displayQuestion() {
 }
 
 //display choices and user selects one
-function displayAnswer() {
-    //getting to the function console shows not displaying choices
+function displayChoices() {
     console.log('hello');
-    for (var i = 0; i < quiz.choices; i++) {
-        var choices = "<p>" + quiz.choices + "<p>";
+    for (var i = 0; i < quiz[i].choices.length; i++) {
+        //append choices to the question
+        var choices = "<input type='radio' name='choice> + '<li>' + quiz.choices + '</li>'";
         $('#choices').html(choices);
     }
 }
+
 
 //user selects submit answer button
 
@@ -124,7 +123,7 @@ functions usages and trigers
 //display the questions
 $(document).ready(function () {
     displayQuestion();
-    displayAnswer();
+    displayChoices();
 });
 
 
