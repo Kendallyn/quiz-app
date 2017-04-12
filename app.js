@@ -73,19 +73,35 @@ var quiz = [
 var currentQuestion = 0;
 //score counter
 var score = 0;
+//
+var choices = '';
 
 //loop through the questions 1 at a time no skipping
 /*declaration vs expression?? declaration of function displayQuestion () {}*/
 var displayQuestion = function () {
-        for (var i = 0; i < quiz[i].length; i++) {
+        for (var i = 0; i < quiz.length; i++) {
             /*code to display and loop through questions and choices and display # from question counter*/
             //append function to html
-            var question = "<p>" + quiz[i].question + "</p>"
+            var question = "<p>" + quiz[i].question + "</p>";
             $('#questions').html(question);
-            currentQuestion++
+            choices += "<input type= 'radio' name= 'answers' id='radioButton' value= ' " + i + "'>" +
+                "<span class= 'answerText'>" + quiz[i].choices[i] +
+                "</span><br>";
+            choices += "<button type= 'submit' id= 'answerButton'>Submit</button>"
+            $("#choices").html(choices);
         }
     }
     //user selects choice
+var displayAnswer = function () {
+    console.log('hit function');
+    for (var i = 0; i < quiz[i].choices.length; i++) {
+        choices += "<input type= 'radio' name= 'answers' id='radioButton' value= ' " + i + "'>" +
+            "<span class= 'answerText'>" + quiz[i].choices[i] +
+            "</span><br>";
+    }
+    choices += "<button type= 'submit' id= 'answerButton'>Submit</button>"
+    $("#choices").html(choices);
+}
 
 //user selects submit answer button
 
@@ -101,6 +117,9 @@ var score = function () {
         }
     }
     /*Once quiz is complete show overall score and give restart quiz button*/
+var displayResults = function () {
+    //code for showing correct answers
+}
 
 
 /*************  STEP 2
@@ -108,10 +127,11 @@ functions usages and trigers
 *************************/
 //display the questions
 $(document).ready(function () {
-displayQuestion();
+    displayQuestion();
+    displayAnswer();
 });
+
 
 //once a choice is selected, indicate correct or incorrect
 /*$('#choices').on('submit keypress', function (event) {
     if (event.type === 'keypress')*/
-})
