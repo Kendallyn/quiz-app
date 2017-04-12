@@ -94,6 +94,8 @@ function displayChoices() {
         var choices = "<input type='radio' name='choice> + '<li>' + quiz.choices + '</li>'";
         $('#choices').html(choices);
     }
+    choices += "<li> + <button type= 'submit'>Submit</button> + </li>"
+    $("#submit-answer").html(choices);
 }
 
 
@@ -124,6 +126,8 @@ functions usages and trigers
 $(document).ready(function () {
     displayQuestion();
     displayChoices();
+    choices += "<button type= 'submit'>Submit</button>"
+    $("#submit-answer").html(choices);
 });
 
 
