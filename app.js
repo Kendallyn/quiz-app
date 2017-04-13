@@ -78,41 +78,28 @@ var score = 0;
 
 //loop through the questions 1 at a time no skipping
 function displayQuestion() {
-    for (var i = 0; i < quiz.length; i++) {
-        /*code to display and loop through questions and choices and display # from question counter*/
-        //append function to html
-        var question = "<p>" + quiz[i].question + "</p>";
-        $('#questions').html(question);
-    }
-}
 
-//display choices and user selects one
-function displayChoices() {
-    console.log('hello');
-    for (var i = 0; i < quiz[i].choices.length; i++) {
+    /*code to display and loop through questions and choices and display # from question counter*/
+    //append function to html
+    var question = "<p>" + quiz[currentQuestion].question + "</p>";
+    $('#questions').html(question);
+    var choices = "";
+    for (var i = 0; i < quiz[currentQuestion].choices.length; i++) {
         //append choices to the question
-        var choices = "<input type='radio' name='choice> + '<li>' + quiz.choices + '</li>'";
-        $('#choices').html(choices);
+        choices += "<input type='radio' name='choice' value='" + i + "'>" + quiz[currentQuestion].choices[i] + "<br />";
     }
-    choices += "<li> + <button type= 'submit'>Submit</button> + </li>"
-    $("#submit-answer").html(choices);
+    $('#choices').html(choices);
+    var showScore = "<p>Your score so far: " + score + "</p>";
+    $('#score').html(showScore);
+    var showCurrentQuestionNumber = "<p>Question " + (currentQuestion + 1) + " out of " + quiz.length + "</p>";
+    $('#showCurrentQuestionNumber').html(showCurrentQuestionNumber);
 }
-
 
 //user selects submit answer button
 
 
 //check if answer is correct
-function score() {
-    var guess = ''
-        //if correct add one to score
-    if (guess === quiz.correct) {
-        score += 1;
-        //if not correct do not add one to the score and show explanation
-    } else {
-        score += 0;
-    }
-}
+
 /*Once quiz is complete show overall score and give restart quiz button*/
 function displayResults() {
     //code for showing correct answers
@@ -125,9 +112,6 @@ functions usages and trigers
 //display the questions
 $(document).ready(function () {
     displayQuestion();
-    displayChoices();
-    choices += "<button type= 'submit'>Submit</button>"
-    $("#submit-answer").html(choices);
 });
 
 
