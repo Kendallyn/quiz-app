@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <title>Wolf Quiz App</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Arapey|Courgette" rel="stylesheet">
 </head>
 
 <body>
-    <!--Quiz box as a whole in container-->
-    <div class="container">
+    <div id="container">
+        <header>
+            <img src="img/howlingwolf.JPG" alt="howling wolf" id="photo">
+            <h1>Wolf Quiz App</h1>
+        </header>
+        <!--Quiz box as a whole in container-->
+
         <!--Begin quiz section-->
         <section class="begin">
-            <h1>Wolf Quiz App</h1>
             <p>Take this quiz to test your knowledge about how much you really know about wolves!</p>
-            <input type="submit" value="Begin!">
+            <input type="submit" value="Begin!" id="begin">
         </section>
 
         <section class="quiz">
@@ -40,11 +45,11 @@
             <!--Start over button at the end of the quiz-->
             <input type="submit" value="Start Over">
         </section>
-    </div>
 
-    <!--Javascript links-->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+        <!--Javascript links-->
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </div>
 </body>
 
 </html>
