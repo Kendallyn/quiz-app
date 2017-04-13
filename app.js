@@ -95,7 +95,6 @@ function displayQuestion() {
     $('#showCurrentQuestionNumber').html(showCurrentQuestionNumber);
 }
 
-//user selects submit answer button
 
 
 //check if answer is correct
@@ -103,6 +102,7 @@ function displayQuestion() {
 /*Once quiz is complete show overall score and give restart quiz button*/
 function displayResults() {
     //code for showing correct answers
+    var showExplanation = "<p>"
 }
 
 
@@ -111,10 +111,37 @@ functions usages and trigers
 *************************/
 //display the questions
 $(document).ready(function () {
-    displayQuestion();
+    //displayQuestion();
+    $('.quiz').hide();
+    $('.results').hide();
+
+    /*Begin the Quiz shows first question*/
+    $('.begin').click(function () {
+        $('.begin').hide();
+        $('.results').hide();
+        $('.quiz').show();
+        displayQuestion();
+    });
+
+    /*User makes selection by clicking on radio button to advance to next question*/
+    //Not working
+    /*$('.quiz').on('click', '.option', function () {
+        var userSelection = $("input[class='option']:checked").val();
+        var correctSelection = quiz[currentQuestion].correct;
+        if (userSelection == correctSelection) {
+            console.log('hello');
+            score++;
+        }*?
+    });
+    /*Checks results of choice selected by user*/
+    if ((currentQuestion + 1) == quiz.length) {
+        $('#score').html(score);
+        $('.quiz').hide();
+        $('.begin').hide();
+        $('.results').show();
+        //if all quiz questions have not displayed, show the next question
+    } else {
+        currentQuestion++
+        displayQuestion();
+    }
 });
-
-
-//once a choice is selected, indicate correct or incorrect
-/*$('#choices').on('submit keypress', function (event) {
-    if (event.type === 'keypress')*/

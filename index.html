@@ -10,36 +10,36 @@
 <body>
     <!--Quiz box as a whole in container-->
     <div class="container">
-        <div id="title">
+        <!--Begin quiz section-->
+        <section class="begin">
             <h1>Wolf Quiz App</h1>
-        </div>
-        <!--Begin quiz button-->
-        <input type="submit" value="Begin!">
+            <p>Take this quiz to test your knowledge about how much you really know about wolves!</p>
+            <input type="submit" value="Begin!">
+        </section>
 
-        <div id="questions">
-            <!--current question-->
-        </div>
+        <section class="quiz">
+            <!-- question is displayed-->
+            <div id="questions">
+            </div>
+            <!--choices for questions are displayed-->
+            <div id="choices">
+                <input type="radio" name="option" class="option">
+                <input type="radio" name="option" class="option">
+                <input type="radio" name="option" class="option">
+                <input type="radio" name="option" class="option">
+            </div>
+            <!--show question progress through quiz-->
+            <div id="showCurrentQuestionNumber">
+            </div>
+        </section>
 
-        <div id="choices">
-            <!--choices-->
-            <input type="radio" name="choice">
-            <input type="radio" name="choice">
-            <input type="radio" name="choice">
-            <input type="radio" name="choice">
-        </div>
-
-        <div id="submit-answer">
-            <button type='submit'>Submit</button>
-        </div>
-        <div id="score">
-            <!--score-->
-        </div>
-
-        <!--explanation if incorrect-->
-        <!--overall score and start quiz over button after last question answer completed-->
-        <div id="showCurrentQuestionNumber">
-
-        </div>
+        <section class="results">
+            <!--overall score and start quiz over button after last question answer completed-->
+            <div id="score">
+            </div>
+            <!--Start over button at the end of the quiz-->
+            <input type="submit" value="Start Over">
+        </section>
     </div>
 
     <!--Javascript links-->
