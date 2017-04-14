@@ -1,15 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+html {
+    background-image: url(img/howlingwolf.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 body {
     text-align: center;
     font-family: 'Arapey', serif;
 }
 
-#photo {
-    height: 200px;
-    width: 225px;
-    border-radius: 50%;
+.banner {
+    padding-top: 1rem;
 }
 
 h1 {
     text-align: center;
     font-family: 'Courgette', cursive;
+    color: #f08080;
+    padding-bottom: 5rem;
+    font-weight: 500;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px #000000;
 }
+
+.begin p {
+    font-size: 30px;
+    padding-top: 25rem;
+    color: #28e9af;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#begin-button {
+    font-size: 1.5rem;
+    padding: 5px 5px;
+    margin-top: 1rem;
+    border-radius: 5%;
+    color: #f08080;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px #000000;
+    background-color: transparent;
+    border: 2px solid #28e9af;
+}
+
+.quiz {
+    display: inline-block;
+}
+
+#questions {
+    font-size: 30px;
+    color: #28e9af;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 15rem;
+}
+
+#choices {
+    font-size: 25px;
+    color: #28e9af;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#score {
+    font-size: 25px;
+    color: #28e9af;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 1rem;
+}
+
+#showCurrentQuestionNumber {
+    font-size: 25px;
+    color: #28e9af;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 1rem;
+}
+
+
+/*.quiz {
+    font-size: 25px;
+    color: #28e9af;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 15rem;
+}*/
