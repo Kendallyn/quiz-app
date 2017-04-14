@@ -86,7 +86,7 @@ function displayQuestion() {
     var choices = "";
     for (var i = 0; i < quiz[currentQuestion].choices.length; i++) {
         //append choices to the question
-        choices += "<input type='radio' name='choice' value='" + i + "'>" + quiz[currentQuestion].choices[i] + "<br />";
+        choices += "<input type='radio' name='choice' class='option' value='" + i + "'>" + quiz[currentQuestion].choices[i] + "<br />";
     }
     $('#choices').html(choices);
     var showScore = "<p>Your score so far: " + score + "</p>";
@@ -95,15 +95,6 @@ function displayQuestion() {
     $('#showCurrentQuestionNumber').html(showCurrentQuestionNumber);
 }
 
-
-
-//check if answer is correct
-
-/*Once quiz is complete show overall score and give restart quiz button*/
-function displayResults() {
-    //code for showing correct answers
-    var showExplanation = "<p>"
-}
 
 
 /*************  STEP 2
@@ -123,25 +114,36 @@ $(document).ready(function () {
         displayQuestion();
     });
 
+
     /*User makes selection by clicking on radio button to advance to next question*/
     //Not working
-    /*$('.quiz').on('click', '.option', function () {
+    $('.quiz').on('click', '.option', function () {
+
         var userSelection = $("input[class='option']:checked").val();
         var correctSelection = quiz[currentQuestion].correct;
         if (userSelection == correctSelection) {
-            console.log('hello');
+
             score++;
-        }*?
+        }
+        //results container and display question and explanation
+        $('#resultsMessage').append("<h3> " + quiz[currentQuestion].question + "<h3>");
+        $('#resultsMessage').append("<h4> " + quiz[currentQuestion].explanation + "<h4>");
+
+
+        /*Checks results of choice selected by user*/
+        if ((currentQuestion + 1) == quiz.length) {
+            console.log('hello');
+            $('#finalScore').html("<p>Your final score is " + score + " out of " + quiz.length + "</p>");
+            $('.quiz').hide();
+            $('.begin').hide();
+            $('.results').show();
+            //if all quiz questions have not displayed, show the next question
+        } else {
+            currentQuestion++;
+            displayQuestion();
+        };
     });
-    /*Checks results of choice selected by user*/
-    if ((currentQuestion + 1) == quiz.length) {
-        $('#score').html(score);
-        $('.quiz').hide();
-        $('.begin').hide();
-        $('.results').show();
-        //if all quiz questions have not displayed, show the next question
-    } else {
-        currentQuestion++
-        displayQuestion();
-    }
+    $('#startOver').click(function () {
+        location.reload();
+    });
 });
