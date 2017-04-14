@@ -96,7 +96,6 @@ function displayQuestion() {
 }
 
 
-
 /*************  STEP 2
 functions usages and trigers
 *************************/
@@ -126,8 +125,8 @@ $(document).ready(function () {
             score++;
         }
         //results container and display question and explanation
-        $('#resultsMessage').append("<h3> " + quiz[currentQuestion].question + "<h3>");
-        $('#resultsMessage').append("<h4> " + quiz[currentQuestion].explanation + "<h4>");
+        $('#resultsMessage').append("<h3> Q: " + quiz[currentQuestion].question + "<h3>");
+        $('#resultsMessage').append("<h4> A: " + quiz[currentQuestion].explanation + "<h4>");
 
 
         /*Checks results of choice selected by user*/
