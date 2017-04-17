@@ -73,8 +73,6 @@ var quiz = [
 var currentQuestion = 0;
 //score counter
 var score = 0;
-//
-
 
 //loop through the questions 1 at a time no skipping
 function displayQuestion() {
@@ -97,11 +95,11 @@ function displayQuestion() {
 
 
 /*************  STEP 2
-functions usages and trigers
+functions usage and triggers
 *************************/
+
 //display the questions
 $(document).ready(function () {
-    //displayQuestion();
     $('.quiz').hide();
     $('.results').hide();
 
@@ -115,13 +113,11 @@ $(document).ready(function () {
 
 
     /*User makes selection by clicking on radio button to advance to next question*/
-    //Not working
     $('.quiz').on('click', '.option', function () {
 
         var userSelection = $("input[class='option']:checked").val();
         var correctSelection = quiz[currentQuestion].correct;
         if (userSelection == correctSelection) {
-
             score++;
         }
         //results container and display question and explanation
@@ -142,6 +138,7 @@ $(document).ready(function () {
             displayQuestion();
         };
     });
+
     $('#startOver').click(function () {
         location.reload();
     });
