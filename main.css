@@ -12,13 +12,13 @@
     -webkit-padding-after: 0px;
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
-    min-height: 100%;
-    min-width: 100%;
 }
 
 html {
     background: rgba(0, 0, 0, 0) url("../img/howlingwolf.JPG") no-repeat center center fixed;
     background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 body {
