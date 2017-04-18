@@ -7,9 +7,8 @@
 }
 
 html {
-    background-image: url(img/howlingwolf.JPG);
+    background: rgba(0, 0, 0, 0) url("img/howlingwolf.jpg") no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 body {
