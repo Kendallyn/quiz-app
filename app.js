@@ -84,7 +84,7 @@ function displayQuestion() {
     var choices = "";
     for (var i = 0; i < quiz[currentQuestion].choices.length; i++) {
         //append choices to the question
-        choices += "<input type='radio' name='choice' class='option' value='" + i + "'>" + quiz[currentQuestion].choices[i] + "<br />";
+        choices += "<label><input type='radio' name='choice' class='option' value='" + i + "'>" + quiz[currentQuestion].choices[i] + "</label>";
     }
     $('#choices').html(choices);
     var showScore = "<p>Your score so far: " + score + "</p>";
@@ -104,7 +104,7 @@ $(document).ready(function () {
     $('.results').hide();
 
     /*Begin the Quiz shows first question*/
-    $('.begin').click(function () {
+    $('#begin-button').click(function () {
         $('.begin').hide();
         $('.results').hide();
         $('.quiz').show();
