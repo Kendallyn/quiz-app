@@ -12,6 +12,8 @@
     -webkit-padding-after: 0px;
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 html {
