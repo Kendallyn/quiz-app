@@ -83,7 +83,7 @@ function displayQuestion() {
     $('#questions').html(question);
     var choices = "";
     for (var i = 0; i < quiz[currentQuestion].choices.length; i++) {
-        //append choices to the question
+        //append choices to the question label add so user can click on radio button or word next to button
         choices += "<label><input type='radio' name='choice' class='option' value='" + i + "'>" + quiz[currentQuestion].choices[i] + "</label>";
     }
     $('#choices').html(choices);
