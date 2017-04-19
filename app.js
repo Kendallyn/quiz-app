@@ -49,7 +49,7 @@ var quiz = [
         explanation: "Wolves have 1500psi jaw power, compared to German Shepherds with 750psi",
     },
     {
-        question: "How many pounds of meat can wolves consumer in a single feeding?",
+        question: "How many pounds of meat can wolves consume in a single feeding?",
         choices: ["5 lbs", "10 lbs", "15 lbs", "20 lbs"],
         correct: 3,
         explanation: "Wolves can consume up to 20 lbs of meating in a single feeding",
