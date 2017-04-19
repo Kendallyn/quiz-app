@@ -7,7 +7,7 @@
 }
 
 html {
-    background: rgba(0, 0, 0, 0) url("img/howlingwolf.JPG") no-repeat center center fixed;
+    background: rgba(0, 0, 0, 0) url("img/wolfface.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -27,7 +27,7 @@ body {
 h1 {
     text-align: center;
     font-family: 'Courgette', cursive;
-    color: #ffd3ae;
+    color: #FA8072;
     padding-bottom: 5rem;
     font-weight: 500;
     font-size: 60px;
@@ -36,7 +36,7 @@ h1 {
 
 .begin p {
     font-size: 30px;
-    color: #00ffff;
+    color: #35E3C1;
     margin-top: 15rem;
     text-shadow: 2px 2px 4px #000000;
     background-color: rgba(0, 0, 0, 0.4);
@@ -52,7 +52,7 @@ h1 {
     font-weight: 500;
     text-shadow: 2px 2px 4px #000000;
     background-color: rgba(0, 0, 0, 0.4);
-    border: 2px solid #00d8c8;
+    border: 2px solid #35E3C1;
 }
 
 .quiz {
@@ -65,7 +65,7 @@ h1 {
 
 #questions {
     font-size: 30px;
-    color: #00ffff;
+    color: #35E3C1;
     text-shadow: 2px 2px 4px #000000;
     padding: 1rem;
     width: 85%;
@@ -81,7 +81,7 @@ h1 {
 
 #choices {
     font-size: 25px;
-    color: #00ffff;
+    color: #35E3C1;
     text-shadow: 2px 2px 4px #000000;
     text-align: left;
     margin: 1rem 5rem;
@@ -96,7 +96,7 @@ h1 {
 
 #showCurrentQuestionNumber {
     font-size: 25px;
-    color: #00ffff;
+    color: #35E3C1;
     text-shadow: 2px 2px 4px #000000;
     margin-top: 1rem;
 }
@@ -107,7 +107,7 @@ h1 {
 
 #resultsMessage h3 {
     font-size: 25px;
-    color: #00d8c8;
+    color: #35E3C1;
     text-shadow: 2px 2px 4px #000000;
     margin-top: 1rem;
 }
@@ -121,7 +121,7 @@ h1 {
 
 #finalScore {
     font-size: 25px;
-    color: #00d8c8;
+    color: #35E3C1;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
     margin-top: 1rem;
