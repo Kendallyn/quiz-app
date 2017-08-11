@@ -44,7 +44,7 @@ var quiz = [
     },
     {
         question: "How much stronger is a wolf jaw compared to a domesticated dog?",
-        choices: ["About the same", "twice as strong", "five times stronger", "it is unknown"],
+        choices: ["about the same", "twice as strong", "five times stronger", "it is unknown"],
         correct: 1,
         explanation: "Wolves have twice as much jaw power, compared to domesicated dogs",
     },
