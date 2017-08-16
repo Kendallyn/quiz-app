@@ -12,7 +12,6 @@ html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
 }
 
 body {
@@ -69,7 +68,6 @@ h1 {
     text-shadow: 2px 2px 4px #000000;
     padding: 1rem;
 }
-
 
 .option {
     margin-right: 10px;
